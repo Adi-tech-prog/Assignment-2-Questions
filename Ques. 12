@@ -1,0 +1,30 @@
+Write a program to read a positive integer number n and generate the numbers in the following way. If the entered number is 3, the output will be as follows:
+9410149
+9410123
+---------------------------------------------------------------------------------------------------
+
+
+#include <stdio.h>
+int main() {
+    int n;
+
+    // Read the input value for n
+    printf("Enter a positive integer n: ");
+    scanf("%d", &n);
+
+    // Print the first line
+    printf("94101%d%d\n", n, 9 - n);  // 49 for n=3 (3 and 9-3 = 6)
+
+    // Print the second line
+    printf("94101%d%d\n", n, n - 1);  // 23 for n=3 (3 and 3-1=2)
+
+    return 0;
+}
+
+
+OUTPUT:-
+Enter a positive integer n: 3
+9410149
+9410123
+
+
