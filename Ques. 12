@@ -5,26 +5,39 @@ Write a program to read a positive integer number n and generate the numbers in 
 
 
 #include <stdio.h>
+
 int main() {
     int n;
 
-    // Read the input value for n
-    printf("Enter a positive integer n: ");
+    printf("Enter a positive integer: ");
     scanf("%d", &n);
 
-    // Print the first line
-    printf("94101%d%d\n", n, 9 - n);  // 49 for n=3 (3 and 9-3 = 6)
+    // First line: squares of numbers from n to 0, then from 1 to n
+    for (int i = n; i >= 0; i--) {
+        printf("%d ", i * i);
+    }
+    for (int i = 1; i <= n; i++) {
+        printf("%d ", i * i);
+    }
+    printf("\n");
 
-    // Print the second line
-    printf("94101%d%d\n", n, n - 1);  // 23 for n=3 (3 and 3-1=2)
+    // Second line: numbers from n to 0, then from 1 to n
+    for (int i = n; i >= 0; i--) {
+        printf("%d ", i);
+    }
+    for (int i = 1; i <= n; i++) {
+        printf("%d ", i);
+    }
+    printf("\n");
 
     return 0;
 }
 
 
 OUTPUT:-
-Enter a positive integer n: 3
-9410149
-9410123
+Enter a positive integer: 3
+9 4 1 0 1 4 9
+3 2 1 0 1 2 3
+
 
 
